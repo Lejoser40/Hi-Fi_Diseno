@@ -23,15 +23,40 @@ const urlRoutes = {
 		title: "Home | " + urlPageTitle,
 		description: "This is the home page",
 	},
-	"/about": {
-		template: "/templates/about.html",
-		title: "About Us | " + urlPageTitle,
-		description: "This is the about page",
+	"/nuevaSolicitud": {
+		template: "/templates/nuevaSolicitud.html",
+		title: "Nueva Solicitud | " + urlPageTitle,
+		description: "Nueva Solicitud",
 	},
-	"/contact": {
-		template: "/templates/contact.html",
-		title: "Contact Us | " + urlPageTitle,
-		description: "This is the contact page",
+	"/misSolicitudes": {
+		template: "/templates/misSolicitudes.html",
+		title: "Mis Solicitudes | " + urlPageTitle,
+		description: "This is the solcitudes page",
+	},
+	"/agregarUsuarios": {
+		template: "/templates/admin_Roles_y_Usuarios/agregarUsuarios.html",
+		title: "Agregar usuarios | " + urlPageTitle,
+		description: "This is the agregar usuarios page",
+	},
+	"/adminRoles": {
+		template: "/templates/admin_Roles_y_Usuarios/adminRoles.html",
+		title: "Administrar Roles | " + urlPageTitle,
+		description: "This is the Administrar Roles page",
+	},
+	"/logEventos": {
+		template: "/templates/Auditoria_Procesos/logEventos.html",
+		title: "Administrar Roles | " + urlPageTitle,
+		description: "This is the Administrar Roles page",
+	},
+	"/snapSolicitudes": {
+		template: "/templates/Auditoria_Procesos/snapSolicitudes.html",
+		title: "Administrar Roles | " + urlPageTitle,
+		description: "This is the Administrar Roles page",
+	},
+	"/miPerfil": {
+		template: "/templates/miPerfil.html",
+		title: "Mi Perfil | " + urlPageTitle,
+		description: "Mi Perfil",
 	},
 };
 
