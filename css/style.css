@@ -19,7 +19,7 @@
 }
 
 .logo img {
-  max-width: 50px;
+  max-width: 60px;
 }
 
 .navigation {
@@ -59,6 +59,9 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/*****************************************
+* COntenido Principal                    *
+******************************************/
 .content {
   background-color: white;
   padding: 20px;
@@ -66,7 +69,10 @@
   flex-grow: 1; /* Permite que el contenido crezca y tome el espacio restante */
 }
 
+
 .search-bar{
+  flex-grow: 1;
+  text-align: center;
   justify-self: center;
 }
 
@@ -79,7 +85,7 @@
 }
 
 .search-bar button {
-  padding: 10px;
+  padding: 13px;
   background-color: #000000;
   color: white;
   border: none;
@@ -87,14 +93,34 @@
 }
 
 
-
 .user-info {
+  /*margin-left: auto;*/
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0px;
 }
 
 .user-info img {
-  width: 40px;
+  width: 60px;
   border-radius: 20px;
+  margin-right: 10px;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-grow: 1;  /* Permite que .user-role crezca para ocupar el espacio disponible */
+  margin: 0;
+  /*justify-content: flex-end;  /* Alinea los spans al extremo derecho */
+}
+
+.user span {
+  margin-left: 0px;  /* Asegura algo de espacio entre los spans */
+  font-size: 15px;
+}
+
+.user span:first-child {
+  font-size: 20px;
+  font-weight: bold;
 }
