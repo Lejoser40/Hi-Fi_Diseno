@@ -45,9 +45,9 @@
                 </summary>
                 <ul>
                   <li>
-                    <a href="/agregarUsuarios"> Agregar Usuario </a>
+                    <a href="#" onclick="cambiarContenido('/templates/admin_Roles_y_Usuarios/agregarUsuarios.html')"> Agregar Usuario </a>
                   </li>
-                  <li><a href="/adminRoles">Admin Roles</a></li>
+                  <li><a href="#" onclick="cambiarContenido('/templates/admin_Roles_y_Usuarios/adminRoles.html')">Admin Roles</a></li>
                 </ul>
               </details>
             </li>
@@ -58,13 +58,21 @@
                   Auditoria Procesos
                 </summary>
                 <ul>
-                  <li><a href="/logEventos">Log de Eventos</a></li>
-                  <li><a href="/snapSolicitudes">Snap de Solicitudes</a></li>
+                  <li>
+                    <a href="#" onclick="cambiarContenido('/templates/Auditoria_Procesos/logEventos.html')">
+                      Log de Eventos
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" onclick="cambiarContenido('/templates/Auditoria_Procesos/snapSolicitudes.html')">
+                      Snap de Solicitudes
+                    </a>
+                  </li>
                 </ul>
               </details>
             </li>
             <li>
-              <a href="/miPerfil">
+              <a href="#" onclick="cambiarContenido('/templates/miPerfil.html')" >
                 <span><img src="img/config.png" class="w-11"></img></span>
                 Mi Perfil
               </a>
