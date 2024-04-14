@@ -1,35 +1,48 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/fastbootstrap@2.2.0/dist/css/fastbootstrap.min.css" rel="stylesheet" integrity="sha256-V6lu+OdYNKTKTsVFBuQsyIlDiRWiOmtC8VQ8Lzdm2i4=" crossorigin="anonymous">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/fastbootstrap@2.2.0/dist/css/fastbootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha256-V6lu+OdYNKTKTsVFBuQsyIlDiRWiOmtC8VQ8Lzdm2i4="
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <div class="container mt-5">  
+    <div class="container mt-5">
       <form>
         <div class="row mb-3">
+
+          <!-- combo box Status -->
           <div class="col-md-6">
             <label for="combobox1" class="form-label">Filtrar por Status</label>
             <select class="form-select" id="combobox1">
-              <option value="">Seleccione una opción</option>
               <option value="opcion1">Todas</option>
               <option value="opcion2">Proceso de compra</option>
               <option value="opcion3">Pendiente Aprobacion Financiera</option>
               <option value="opcion3">Pendiente Aprobacion Jefatura</option>
             </select>
           </div>
-  
+
+          <!-- combo box Monto -->
           <div class="col-md-6">
-            <label for="combobox2" class="form-label">Filtrar por rango de monto</label>
+            <label for="combobox2" class="form-label"
+              >Filtrar por rango de monto</label
+            >
             <select class="form-select" id="combobox2">
-              <option value="">Seleccione una opción</option>
-              <option value="opcion4">₡1-₡100</option>
+              <option value="opcion4">Todas</option>
               <option value="opcion5">₡100-₡100.000</option>
               <option value="opcion6">₡100.000-₡1.000.000</option>
             </select>
           </div>
         </div>
-  
+
+        <!-- Tabla -->
         <div class="row mb-3">
           <div class="col-md-12">
             <label for="tabla" class="form-label">Tabla:</label>
@@ -40,7 +53,7 @@
                   <th>Descripcion</th>
                   <th>Departamento</th>
                   <th>status</th>
-                  <th>Ver</th>
+                  <th>Ver / Editar</th>
                 </tr>
               </thead>
               <tbody>
@@ -49,91 +62,520 @@
                   <td>UPGRADE RAM PC</td>
                   <td>Produccion</td>
                   <td>Proceso de compra</td>
-                  <td>X</td>
+                  <td>
+                    <a
+                      href="/templates/Mis Solicitudes/verSolicitud.html"
+                      class="icon-link link-underline-opacity-0"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="grey"
+                          d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5M12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5s5 2.24 5 5s-2.24 5-5 5m0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3s3-1.34 3-3s-1.34-3-3-3"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      href="/templates/Mis Solicitudes/editarSolicitud.html"
+                      class="icon-link link-underline-opacity-0"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="grey"
+                          d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm4 18H6V4h7v5h5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
                 </tr>
                 <tr>
                   <td>RQ-00125</td>
                   <td>Sistema video Conferencia Salas de Junta</td>
                   <td>Gerencia</td>
                   <td>Pendiente Aprobacion Finan</td>
-                  <td>X</td>
+                  <td>
+                    <a
+                      href="/templates/Mis Solicitudes/verSolicitud.html"
+                      class="icon-link link-underline-opacity-0"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="grey"
+                          d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5M12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5s5 2.24 5 5s-2.24 5-5 5m0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3s3-1.34 3-3s-1.34-3-3-3"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      href="/templates/Mis Solicitudes/editarSolicitud.html"
+                      class="icon-link link-underline-opacity-0"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="grey"
+                          d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm4 18H6V4h7v5h5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
                 </tr>
                 <tr>
                   <td>RQ-00122</td>
                   <td>Equipo Desktop Nuevo Puesto de Auditor</td>
                   <td>Auditoria</td>
                   <td>Proceso de Compra</td>
-                  <td>X</td>
+                  <td>
+                    <a
+                      href="/templates/Mis Solicitudes/verSolicitud.html"
+                      class="icon-link link-underline-opacity-0"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="grey"
+                          d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5M12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5s5 2.24 5 5s-2.24 5-5 5m0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3s3-1.34 3-3s-1.34-3-3-3"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      href="/templates/Mis Solicitudes/editarSolicitud.html"
+                      class="icon-link link-underline-opacity-0"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="grey"
+                          d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm4 18H6V4h7v5h5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
                 </tr>
                 <tr>
                   <td>RQ-00117</td>
                   <td>Mobiliario Nueva Oficina Contabilidad</td>
                   <td>Contabilidad</td>
                   <td>Proceso de Compra</td>
-                  <td>X</td>
+                  <td>
+                    <a
+                      href="/templates/Mis Solicitudes/verSolicitud.html"
+                      class="icon-link link-underline-opacity-0"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="grey"
+                          d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5M12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5s5 2.24 5 5s-2.24 5-5 5m0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3s3-1.34 3-3s-1.34-3-3-3"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      href="/templates/Mis Solicitudes/editarSolicitud.html"
+                      class="icon-link link-underline-opacity-0"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="grey"
+                          d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm4 18H6V4h7v5h5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
                 </tr>
                 <tr>
                   <td>RQ-00132</td>
                   <td>Upgrade RAM PC</td>
                   <td>Produccion</td>
                   <td>Proceso de Compra</td>
-                  <td>X</td>
+                  <td>
+                    <a
+                      href="/templates/Mis Solicitudes/verSolicitud.html"
+                      class="icon-link link-underline-opacity-0"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="grey"
+                          d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5M12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5s5 2.24 5 5s-2.24 5-5 5m0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3s3-1.34 3-3s-1.34-3-3-3"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      href="/templates/Mis Solicitudes/editarSolicitud.html"
+                      class="icon-link link-underline-opacity-0"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="grey"
+                          d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm4 18H6V4h7v5h5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
                 </tr>
                 <tr>
                   <td>RQ-00125</td>
                   <td>Sistema Video Conferencia para Salas de Juntas</td>
                   <td>Gerencia</td>
                   <td>Pendiente Aprobación Financiera</td>
-                  <td>X</td>
+                  <td>
+                    <a
+                      href="/templates/Mis Solicitudes/verSolicitud.html"
+                      class="icon-link link-underline-opacity-0"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="grey"
+                          d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5M12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5s5 2.24 5 5s-2.24 5-5 5m0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3s3-1.34 3-3s-1.34-3-3-3"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      href="/templates/Mis Solicitudes/editarSolicitud.html"
+                      class="icon-link link-underline-opacity-0"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="grey"
+                          d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm4 18H6V4h7v5h5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
                 </tr>
                 <tr>
                   <td>RQ-00125</td>
                   <td>Sistema Video Conferencia para Salas de Juntas</td>
                   <td>Gerencia</td>
                   <td>Pendiente Aprobación Financiera</td>
-                  <td>X</td>
+                  <td>
+                    <a
+                      href="/templates/Mis Solicitudes/verSolicitud.html"
+                      class="icon-link link-underline-opacity-0"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="grey"
+                          d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5M12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5s5 2.24 5 5s-2.24 5-5 5m0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3s3-1.34 3-3s-1.34-3-3-3"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      href="/templates/Mis Solicitudes/editarSolicitud.html"
+                      class="icon-link link-underline-opacity-0"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="grey"
+                          d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm4 18H6V4h7v5h5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
                 </tr>
                 <tr>
                   <td>RQ-00128</td>
                   <td>Contratación de Servicio de Limpieza</td>
                   <td>Mantenimiento</td>
                   <td>Pendiente Aprobación Jefatura</td>
-                  <td>X</td>
+                  <td>
+                    <a
+                      href="/templates/Mis Solicitudes/verSolicitud.html"
+                      class="icon-link link-underline-opacity-0"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="grey"
+                          d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5M12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5s5 2.24 5 5s-2.24 5-5 5m0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3s3-1.34 3-3s-1.34-3-3-3"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      href="/templates/Mis Solicitudes/editarSolicitud.html"
+                      class="icon-link link-underline-opacity-0"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="grey"
+                          d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm4 18H6V4h7v5h5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
                 </tr>
                 <tr>
                   <td>RQ-00136</td>
                   <td>Renovación de Licencias de Software</td>
                   <td>Tecnología</td>
                   <td>Gestión de Compra</td>
-                  <td>X</td>
+                  <td>
+                    <a
+                      href="/templates/Mis Solicitudes/verSolicitud.html"
+                      class="icon-link link-underline-opacity-0"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="grey"
+                          d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5M12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5s5 2.24 5 5s-2.24 5-5 5m0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3s3-1.34 3-3s-1.34-3-3-3"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      href="/templates/Mis Solicitudes/editarSolicitud.html"
+                      class="icon-link link-underline-opacity-0"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="grey"
+                          d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm4 18H6V4h7v5h5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
                 </tr>
                 <tr>
                   <td>RQ-00141</td>
                   <td>Capacitación en Desarrollo Profesional</td>
                   <td>Recursos Humanos</td>
                   <td>Pendiente Aprobación Jefatura</td>
-                  <td>X</td>
+                  <td>
+                    <a
+                      href="/templates/Mis Solicitudes/verSolicitud.html"
+                      class="icon-link link-underline-opacity-0"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="grey"
+                          d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5M12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5s5 2.24 5 5s-2.24 5-5 5m0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3s3-1.34 3-3s-1.34-3-3-3"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      href="/templates/Mis Solicitudes/editarSolicitud.html"
+                      class="icon-link link-underline-opacity-0"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="grey"
+                          d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm4 18H6V4h7v5h5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
                 </tr>
                 <tr>
                   <td>RQ-00139</td>
                   <td>Renovación de Contrato de Seguros</td>
                   <td>Finanzas</td>
                   <td>Pendiente Aprobación Financiera</td>
-                  <td>X</td>
+                  <td>
+                    <a
+                      href="/templates/Mis Solicitudes/verSolicitud.html"
+                      class="icon-link link-underline-opacity-0"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="grey"
+                          d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5M12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5s5 2.24 5 5s-2.24 5-5 5m0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3s3-1.34 3-3s-1.34-3-3-3"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      href="/templates/Mis Solicitudes/editarSolicitud.html"
+                      class="icon-link link-underline-opacity-0"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="grey"
+                          d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm4 18H6V4h7v5h5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
                 </tr>
                 <tr>
                   <td>RQ-00145</td>
                   <td>Adquisición de Herramientas de Marketing</td>
-                  <td> Mercadotecnia </td>
+                  <td>Mercadotecnia</td>
                   <td>Gestión de Compra</td>
-                  <td>X</td>
+                  <td>
+                    <a
+                      href="/templates/Mis Solicitudes/verSolicitud.html"
+                      class="icon-link link-underline-opacity-0"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="grey"
+                          d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5M12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5s5 2.24 5 5s-2.24 5-5 5m0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3s3-1.34 3-3s-1.34-3-3-3"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      href="/templates/Mis Solicitudes/editarSolicitud.html"
+                      class="icon-link link-underline-opacity-0"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="grey"
+                          d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm4 18H6V4h7v5h5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
                 </tr>
                 <tr>
                   <td>RQ-00149</td>
                   <td>Implementación de Sistema de Gestión de Proyectos</td>
                   <td>Proyectos</td>
                   <td>Pendiente Aprobación Financiera</td>
-                  <td>X</td>
+                  <td>
+                    <a
+                      href="/templates/Mis Solicitudes/verSolicitud.html"
+                      class="icon-link link-underline-opacity-0"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="grey"
+                          d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5M12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5s5 2.24 5 5s-2.24 5-5 5m0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3s3-1.34 3-3s-1.34-3-3-3"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      href="/templates/Mis Solicitudes/editarSolicitud.html"
+                      class="icon-link link-underline-opacity-0"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="grey"
+                          d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm4 18H6V4h7v5h5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
                 </tr>
               </tbody>
             </table>
