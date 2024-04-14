@@ -25,13 +25,13 @@
           <ul class="menu bg-base-190 w-75 rounded-box flex flex-col space-y-4">
             <h2 class="menu-title">Menu</h2>
             <li>
-              <a href="/nuevaSolicitud">
+              <a href="#" onclick="cambiarContenido('/templates/nuevaSolicitud.html')">
                 <span><img src="img/new.png" class="w-11"></img></span>
                 Nueva Solicitud
               </a>
             </li>
             <li>
-              <a href="/misSolicitudes">
+              <a href="#" onclick="cambiarContenido('/templates/misSolicitudes.html')">
                 <span><img src="img/folder.png" class="w-11"></img></span>
                 Mis solicitudes
               </a>
@@ -114,10 +114,11 @@
 
 
         <!-- Contenido principal / lo del centro-->
-        <div id="content"></div>
+        <embed id="content" src="" type="" loading="lazy" class="h-full w-full">
       </div>
 
-      <script src="/js/url-router.js"></script>
     </div>
+    <script src="/js/embed.js"></script>
   </body>
 </html>
+

@@ -62,13 +62,11 @@
 /*****************************************
 * COntenido Principal                    *
 ******************************************/
-.content {
+/*.content {
   background-color: white;
   padding: 20px;
-  text-align: center;
-  flex-grow: 1; /* Permite que el contenido crezca y tome el espacio restante */
-}
-
+  text-align: center; 
+}*/
 
 .search-bar{
   flex-grow: 1;
