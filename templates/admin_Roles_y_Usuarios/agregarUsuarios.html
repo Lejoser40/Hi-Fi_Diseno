@@ -1,14 +1,196 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/style-new-user.css" />
   </head>
   <body>
-    <center>
-      <h1 class="text-3xl font-bold underline">Agregar usuarios!</h1>
-    </center>
+    <form id="form-usuario">
+      <div class="columna">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" />
+
+        <label for="apellidos">Apellidos</label>
+        <input type="text" id="apellidos" name="apellidos" />
+
+        <label for="departamento">Departamento</label>
+        <select id="departamento" name="departamento">
+          <option value="administracion">Administración</option>
+        </select>
+
+        <label for="correo">Correo</label>
+        <input type="email" id="correo" name="correo" />
+      </div>
+
+      <div class="columna">
+        <label for="usuario_activo">Usuario Activo</label>
+        <input type="checkbox" id="usuario_activo" name="usuario_activo" />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" />
+
+        <label for="repetir_password">Repetir Password</label>
+        <input type="password" id="repetir_password" name="repetir_password" />
+
+        <label for="rol_usuario">Rol de Usuario</label>
+        <select id="rol_usuario" name="rol_usuario">
+          <option value="comprador">Comprador</option>
+        </select>
+      </div>
+
+      <div class="columna columna-foto">
+        <div id="foto-perfil-container">
+          <div id="foto-perfil"></div>
+          <label for="foto_perfil" id="foto_perfil_label"
+            >Seleccionar Foto Perfil</label
+          >
+          <input type="file" id="foto_perfil" name="imagen" hidden />
+        </div>
+      </div>
+
+      <div class="columna-full">
+        <button type="submit">Crear Usuario</button>
+      </div>
+    </form>
+    <div class="container">
+      <div id="search-edit-section">
+        <input type="search" id="search-box" placeholder="Buscar..." />
+        <button id="edit-button">Editar</button>
+      </div>
+    </div>
+
+    <table id="user-table">
+      <thead>
+        <tr>
+          <th>Usuario</th>
+          <th>Nombre Completo</th>
+          <th>Departamento</th>
+          <th>Rol</th>
+          <th>Activo</th>
+          <th>Último Ingreso</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>amendez</td>
+          <td>Arnoldo Gonzales Vega</td>
+          <td>Contabilidad</td>
+          <td>Comprador</td>
+          <td>Activo</td>
+          <td>03 Ene 2024</td>
+        </tr>
+        <tr>
+          <td>msaenz</td>
+          <td>Mariana Saenz Montero</td>
+          <td>Producción</td>
+          <td>Comprador</td>
+          <td>Bloqueado</td>
+          <td>12 Feb 2023</td>
+        </tr>
+        <tr>
+          <td>lrodriguez</td>
+          <td>Luis Rodríguez López</td>
+          <td>Ventas</td>
+          <td>Aprobador Ventas</td>
+          <td>Activo</td>
+          <td>20 Nov 2023</td>
+        </tr>
+        <tr>
+          <td>egomez</td>
+          <td>Elena Gomez Perez</td>
+          <td>Recursos Humanos</td>
+          <td>Aprobador RH</td>
+          <td>Activo</td>
+          <td>15 Dic 2023</td>
+        </tr>
+        <tr>
+          <td>jlopez</td>
+          <td>Juan Lopez Garcia</td>
+          <td>Tecnología</td>
+          <td>Comprador</td>
+          <td>Activo</td>
+          <td>10 Oct 2023</td>
+        </tr>
+        <tr>
+          <td>cfernandez</td>
+          <td>Carlos Fernandez Gutierrez</td>
+          <td>Marketing</td>
+          <td>Comprador</td>
+          <td>Bloqueado</td>
+          <td>05 Mar 2023</td>
+        </tr>
+        <tr>
+          <td>rortiz</td>
+          <td>Ricardo Ortiz Ramirez</td>
+          <td>Logística</td>
+          <td>Aprobador Logística</td>
+          <td>Activo</td>
+          <td>28 Sep 2023</td>
+        </tr>
+        <tr>
+          <td>pgonzalez</td>
+          <td>Paula Gonzalez Martinez</td>
+          <td>Recursos Humanos</td>
+          <td>Comprador</td>
+          <td>Activo</td>
+          <td>18 Ago 2023</td>
+        </tr>
+        <tr>
+          <td>rgonzalez</td>
+          <td>Roberto Gonzalez Fernandez</td>
+          <td>Producción</td>
+          <td>Aprobador Producción</td>
+          <td>Activo</td>
+          <td>09 Jul 2023</td>
+        </tr>
+        <tr>
+          <td>smolina</td>
+          <td>Sofia Molina Diaz</td>
+          <td>Finanzas</td>
+          <td>Aprobador Financiero 2</td>
+          <td>Activo</td>
+          <td>25 Jun 2023</td>
+        </tr>
+        <tr>
+          <td>jramirez</td>
+          <td>Javier Ramirez Sanchez</td>
+          <td>Ventas</td>
+          <td>Comprador</td>
+          <td>Bloqueado</td>
+          <td>14 May 2023</td>
+        </tr>
+        <tr>
+          <td>clopez</td>
+          <td>Claudia Flores Gutierrez</td>
+          <td>Tecnología</td>
+          <td>Comprador</td>
+          <td>Activo</td>
+          <td>07 Abr 2023</td>
+        </tr>
+        <tr>
+          <td>pllores</td>
+          <td>Patricia Lopez Hernandez</td>
+          <td>Finanzas</td>
+          <td>Aprobador Financiero 3</td>
+          <td>Activo</td>
+          <td>02 Mar 2023</td>
+        </tr>
+        <tr>
+          <td>ggutierrez</td>
+          <td>Guillermo Gutierrez Soto</td>
+          <td>Recursos Humanos</td>
+          <td>Comprador</td>
+          <td>Activo</td>
+          <td>15 Feb 2023</td>
+        </tr>
+        <tr>
+          <td>jcastro</td>
+          <td>Jorge Castro Fernandez</td>
+          <td>Contabilidad</td>
+          <td>Aprobador Financiero 1</td>
+          <td>Activo</td>
+          <td>21 Ene 2023</td>
+        </tr>
+      </tbody>
+    </table>
   </body>
 </html>

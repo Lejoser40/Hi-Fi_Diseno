@@ -1,14 +1,236 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/style-department-role.css" />
   </head>
   <body>
-    <center>
-      <h1 class="text-3xl font-bold underline">Administrar Roles!</h1>
-    </center>
+    <div id="content-container">
+      <form id="crear-departamento-form">
+        <label for="crear-departamento">Crear Departamento</label>
+        <input type="text" id="crear-departamento" />
+        <button type="button" class="add-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="grey"
+              d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8"
+            />
+          </svg>
+        </button>
+      </form>
+      <hr />
+
+      <div id="asignacion-aprobadores">
+        <h2>Asignación de Aprobadores</h2>
+
+        <label for="search-usuario">Usuario</label>
+        <div class="search-box-container">
+          <input type="search" id="search-usuario" placeholder="Usuario" />
+          <button type="button" class="save-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="grey"
+                d="M17 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V7zm2 16H5V5h11.17L19 7.83zm-7-7c-1.66 0-3 1.34-3 3s1.34 3 3 3s3-1.34 3-3s-1.34-3-3-3M6 6h9v4H6z"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <label for="seleccionar-rol">Seleccionar Rol</label>
+        <select id="seleccionar-rol">
+          <option value="aprobador_financiero_1">Aprobador Financiero 1</option>
+          <option value="aprobador_financiero_1">Aprobador Financiero 1</option>
+          <option value="aprobador_financiero_2">Aprobador Financiero 2</option>
+          <option value="aprobador_financiero_3">Aprobador Financiero 3</option>
+          <option value="aprobador_ventas">Aprobador Ventas</option>
+          <option value="aprobador_rh">Aprobador RH</option>
+          <option value="aprobador_logisticas">Aprobador Logistica</option>
+          <option value="aprobador_produccion">Aprobador Producción</option>
+          <option value="aprobador_ti">Aprobador TI</option>
+        </select>
+
+        <table id="tabla-aprobadores">
+          <thead>
+            <tr>
+              <th>Departamento</th>
+              <th>Usuario Aprobador</th>
+              <th>Rol Aprobador</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Contabilidad</td>
+              <td>jcastro</td>
+              <td>Aprobador Financiero 1</td>
+              <td>
+                <button class="edit-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="grey"
+                      d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm4 18H6V4h7v5h5z"
+                    />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Finanzas</td>
+              <td>smolina</td>
+              <td>Aprobador Financiero 2</td>
+              <td>
+                <button class="edit-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="grey"
+                      d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm4 18H6V4h7v5h5z"
+                    />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Finanzas</td>
+              <td>plopez</td>
+              <td>Aprobador Financiero 3</td>
+              <td>
+                <button class="edit-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="grey"
+                      d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm4 18H6V4h7v5h5z"
+                    />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Ventas</td>
+              <td>lrodriguez</td>
+              <td>Aprobador Ventas</td>
+              <td>
+                <button class="edit-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="grey"
+                      d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm4 18H6V4h7v5h5z"
+                    />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Recursos Humanos</td>
+              <td>egomez</td>
+              <td>Aprobador RH</td>
+              <td>
+                <button class="edit-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="grey"
+                      d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm4 18H6V4h7v5h5z"
+                    />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Logística</td>
+              <td>rortiz</td>
+              <td>Aprobador Logística</td>
+              <td>
+                <button class="edit-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="grey"
+                      d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm4 18H6V4h7v5h5z"
+                    />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Producción</td>
+              <td>rgarcia</td>
+              <td>Aprobador Producción</td>
+              <td>
+                <button class="edit-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="grey"
+                      d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm4 18H6V4h7v5h5z"
+                    />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Tecnología</td>
+              <td>cflores</td>
+              <td>Aprobador TI</td>
+              <td>
+                <button class="edit-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="grey"
+                      d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm4 18H6V4h7v5h5z"
+                    />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </body>
 </html>

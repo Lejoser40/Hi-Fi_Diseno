@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 20px;
+    text-align: center; /* Centers content */
+}
+
+#content-container {
+    max-width: 600px;
+    margin: auto;
+}
+
+#crear-departamento-form, #asignacion-aprobadores {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#crear-departamento-form label, 
+#asignacion-aprobadores label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="search"],
+select {
+    width: calc(100% - 40px); /* Full width minus padding */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.add-btn, .save-btn {
+    background: #eee;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-btn img, .save-btn img, .button img{
+    height: 30px;
+    width: 30px;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #ccc;
+    margin: 20px 10%; /* 90% width effect */
+}
+
+.search-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#tabla-aprobadores {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+#tabla-aprobadores th, 
+#tabla-aprobadores td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#tabla-aprobadores th {
+    background-color: #f2f2f2;
+}
+
+.edit-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#tabla-aprobadores img {
+    width: 30px;
+    height: 30px;
+}

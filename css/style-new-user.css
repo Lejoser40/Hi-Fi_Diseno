@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffff;
+}
+
+#form-usuario {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    width: 80%;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.columna {
+    display: flex;
+    flex-direction: column;
+}
+
+.columna-foto {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#foto-perfil-container {
+    text-align: center;
+}
+
+#foto-perfil {
+    width: 194px;
+    height: 184px;
+    background-color: #ddd;
+    margin-bottom: 10px;
+}
+
+#foto_perfil_label {
+    display: inline-block;
+    background-color: #ddd;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+#form-usuario label {
+    margin-top: 10px;
+}
+
+#form-usuario input,
+#form-usuario select {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.columna-full {
+    grid-column: 1 / -1; /* Abarca todas las columnas */
+}
+
+#form-usuario button {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#form-usuario button:hover {
+    background-color: #4cae4c;
+}
+
+#search-edit-section {
+    display: flex;
+    justify-content: center; /* Alinea horizontalmente en el centro */
+    align-items: center; /* Alinea verticalmente en el centro */
+    margin: 20px auto;
+    gap: 10px; /* Espacio entre el cuadro de búsqueda y el botón */
+}
+
+#search-box {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 300px; /* Ajusta esto según lo que prefieras */
+}
+
+#edit-button {
+    padding: 8px 16px;
+    background-color: #ddd; /* O cualquier color que prefieras */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Esta clase mantiene la tabla y el contenedor de búsqueda al mismo ancho */
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+#user-table {
+    width: 90%; /* Hace que la tabla use todo el ancho del contenedor */
+    margin: 0 auto 20px auto;
+    border-collapse: collapse;
+}
+
+#user-table th,
+#user-table td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+#user-table th {
+    background-color: #f2f2f2;
+}
+
+/* Para alternar colores de las filas */
+#user-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#user-table tr:hover {
+    background-color: #eaeaea;
+}
