@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Vite App</title>
+</head>
+
+<body>
+    <div class="body">
+        <div class="navigation">
+            <div class="logo">
+                <img src="img/logo.png" alt="My Business Logo" />
+                <h1 class="text-3xl">My Business</h1>
+            </div>
+
+            <nav>
+                <ul class="menu bg-base-190 w-75 rounded-box flex flex-col space-y-4">
+                    <h2 class="menu-title">Menu</h2>
+                    <hr>
+                    <li>
+                        <a href="#" onclick="cambiarContenido('/templates/misSolicitudes.html')">
+                            <span><img src="img/folder.png" class="w-11"></img></span>
+                            Mis solicitudes
+                        </a>
+                    </li>
+                    <hr>
+                    <li>
+                        <details>
+                            <summary class="bg-base-190">
+                                <span><img src="img/audit.png" class="w-11"></img></span>
+                                Auditoria Procesos
+                            </summary>
+                            <ul>
+                                <li>
+                                    <a href="#"
+                                        onclick="cambiarContenido('/templates/Auditoria_Procesos/logEventos.html')">
+                                        Log de Eventos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        onclick="cambiarContenido('/templates/Auditoria_Procesos/snapSolicitudes.html')">
+                                        Snap de Solicitudes
+                                    </a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <a href="#" onclick="cambiarContenido('/templates/miPerfil.html')">
+                            <span><img src="img/config.png" class="w-11"></img></span>
+                            Mi Perfil
+                        </a>
+                    </li>
+                    <hr>
+                    <li>
+                        <a href="/index.html">
+                            <span><img src="img/exit.png" class="w-11"></img></span>
+                            Salir
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+
+        <div class="main-content">
+            <div class="header">
+                <!-- barra de busqueda -->
+                <div class="search-bar">
+                    <input type="search" placeholder="Buscar..." />
+                    <button type="button" class="btn">
+                        <img class="icon" src="img/search.png" alt="Buscar" style="filter: invert(100%)" />
+                    </button>
+                </div>
+
+                <!-- Nombre del usuario -->
+                <div class="user-info">
+                    <div class="user">
+                        <span class="user-name">Michael Hudson</span>
+                        <span class="user-role">Aprobador Financiero</span>
+                    </div>
+                </div>
+
+                <!-- Logo Perfil -->
+                <div class="avatar">
+                    <div class="w-18 rounded">
+                        <img src="img/user.png" />
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Contenido principal / lo del centro-->
+            <embed id="content" src="" type="text/html" loading="lazy" class="h-full w-full">
+        </div>
+
+    </div>
+    <script src="/js/embed.js"></script>
+</body>
+
+</html>

@@ -65,7 +65,7 @@ body {
 #form-usuario button {
     width: 100%;
     padding: 10px 0;
-    background-color: #5cb85c;
+    background-color: #085cdc;
     color: white;
     border: none;
     border-radius: 4px;
@@ -74,7 +74,7 @@ body {
 }
 
 #form-usuario button:hover {
-    background-color: #4cae4c;
+    background-color: #085cdc;
 }
 
 #search-edit-section {
