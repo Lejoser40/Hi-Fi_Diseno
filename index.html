@@ -22,7 +22,7 @@
 
               <h1 class="text-center text-2xl font-bold">Login</h1>
 
-              <form id="loginForm" action="#" method="post" onsubmit="return validateLogin()">
+              <form id="loginForm" action="" method="post" onsubmit="return validateLogin()">
                 <div class="form-control">
                   <label class="label">
                     <span class="label-text">Email</span>
@@ -56,7 +56,10 @@
         
         if (email === "administradorsistemas@gmail.com" && password === "1234") {
 
-          document.getElementById("loginForm").action = "menu.html";
+          document.getElementById("loginForm").action = "/menu.html";
+          /*document.getElementById("loginForm").addEventListener("onsubmit", (event) => {
+            window.location.href="/menu.html"; 
+          });*/
 
         } else if (email === "administradorusuarios@gmail.com" && password === "1234") {
 
@@ -64,15 +67,15 @@
 
         }else if (email === "comprador@gmail.com" && password === "1234") {
 
-        document.getElementById("loginForm").action = "menuComprador.html";
+        document.getElementById("loginForm").action = "/menuComprador.html";
 
         }else if (email === "aprobadorjefe@gmail.com" && password === "1234") {
 
-          document.getElementById("loginForm").action = "menuComprador.html";
+          document.getElementById("loginForm").action = "/menuComprador.html";
 
         } else if (email === "aprobadorfinanciero@gmail.com" && password === "1234") {
 
-          document.getElementById("loginForm").action = "menuAprobadorFinanciero.html";
+          document.getElementById("loginForm").action = "/menuAprobadorFinanciero.html";
           
         } else {
           alert("Email o contraseña incorrectos. Por favor, intenta de nuevo.");
