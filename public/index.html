@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Vite App</title>
+  </head>
+
+  <body>
+    <div class="container mx-auto flex min-h-screen items-center justify-center">
+      <div class="card w-100 shadow-md">
+        <div class="card-body">
+          <div class="card w-96 mx-auto mt-16">
+            <div class="card-body">
+
+              <h1 class="text-center text-2xl font-bold">Login</h1>
+
+              <form id="loginForm" action="" method="post" onsubmit="return validateLogin()">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Email</span>
+                  </label>
+                  <input type="email" id="email" name="email" placeholder="email@example.com" class="input input-bordered" />
+                </div>
+
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Password</span>
+                  </label>
+                  <input type="password" id="password" name="password" placeholder="Password" class="input input-bordered" />
+                </div>
+
+                <div class="form-control mt-4">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+                <a href="#" class="label mt-2">Forgot Password?</a>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function validateLogin() {
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        
+        if (email === "administradorsistemas@gmail.com" && password === "1234") {
+
+          document.getElementById("loginForm").action = "/menu.html";
+          /*document.getElementById("loginForm").addEventListener("onsubmit", (event) => {
+            window.location.href="/menu.html"; 
+          });*/
+
+        } else if (email === "administradorusuarios@gmail.com" && password === "1234") {
+
+          document.getElementById("loginForm").action = "menuAdministradorUsuarios.html";
+
+        }else if (email === "comprador@gmail.com" && password === "1234") {
+
+        document.getElementById("loginForm").action = "/menuComprador.html";
+
+        }else if (email === "aprobadorjefe@gmail.com" && password === "1234") {
+
+          document.getElementById("loginForm").action = "/menuComprador.html";
+
+        } else if (email === "aprobadorfinanciero@gmail.com" && password === "1234") {
+
+          document.getElementById("loginForm").action = "/menuAprobadorFinanciero.html";
+          
+        } else {
+          alert("Email o contraseña incorrectos. Por favor, intenta de nuevo.");
+          return false;
+        }
+      }
+      </script>
+  </body>
+</html>
